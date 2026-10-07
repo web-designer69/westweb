@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --midnight: #0B1020;
+    --cloud: #F8FAFC;
+    --cobalt: #2563EB;
+    --electric: #60A5FA;
+    --slate: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 6vw;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    color: var(--cloud);
+}
+
+.logo img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeDown 0.7s ease forwards;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: var(--slate);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--cloud);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--cloud);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 6vw;
+    max-width: 1200px;
+}
+
+.eyebrow {
+    color: var(--electric);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(4rem, 9vw, 8.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+    max-width: 1100px;
+}
+
+h1 span {
+    color: var(--cobalt);
+    display: block;
+}
+
+.hero h1 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease 0.3s forwards;
+}
+
+.hero-text {
+    color: var(--slate);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-top: 36px;
+}
+
+.button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 40px;
+    padding: 16px 24px;
+    background: var(--cobalt);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background 0.2s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.5s ease 0.6s forwards;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+    background: var(--electric);
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 140px 6vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin-bottom: 80px;
+}
+
+.services h2 span {
+    color: var(--cobalt);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    border: 1px solid rgba(248, 250, 252, 0.12);
+    padding: 40px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cobalt);
+}
+
+.service-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+.service-card p {
+    color: var(--slate);
+    line-height: 1.7;
+    max-width: 320px;
+}
+
+/* =========================
+   OUR WORK
+========================= */
+
+.work {
+    padding: 140px 6vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.work h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin-bottom: 80px;
+}
+
+.work h2 span {
+    color: var(--cobalt);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.work-card {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.work-preview {
+    height: 420px;
+    border: 1px solid rgba(248, 250, 252, 0.12);
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.work-preview iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+    background: #ffffff;
+}
+
+.work-preview::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    background: linear-gradient(
+        to top,
+        rgba(11, 16, 32, 0.75),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.work-info {
+    padding: 20px 4px 0;
+}
+
+.work-info h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.work-info p {
+    color: var(--slate);
+    font-size: 0.9rem;
+}
+
+.work-card:hover .work-preview {
+    transform: translateY(-8px);
+    border-color: var(--cobalt);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 180px 6vw 140px;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact .eyebrow {
+    margin-bottom: 30px;
+}
+
+.contact h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    line-height: 0.88;
+    letter-spacing: -0.07em;
+}
+
+.contact h2 span {
+    color: var(--cobalt);
+}
+
+.contact-text {
+    color: var(--slate);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 40px auto 0;
+}
+
+.contact-button {
+    margin-top: 40px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid rgba(248, 250, 252, 0.12);
+    padding: 50px 6vw 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: end;
+}
+
+.footer-brand .logo {
+    margin-bottom: 14px;
+}
+
+.footer-brand p {
+    color: var(--slate);
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 28px;
+}
+
+.footer-links a {
+    color: var(--slate);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cloud);
+}
+
+.copyright {
+    grid-column: 1 / -1;
+    padding-top: 25px;
+    border-top: 1px solid rgba(248, 250, 252, 0.08);
+    color: var(--slate);
+    font-size: 0.75rem;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+#backToTop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(248, 250, 252, 0.2);
+    border-radius: 4px;
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+    z-index: 1000;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background: var(--cobalt);
+    border-color: var(--cobalt);
+    color: white;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 240px;
+    }
+
+    .services {
+        padding: 100px 24px;
+    }
+
+    .work {
+        padding: 100px 24px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-preview {
+        height: 360px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header nav {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+        transition: color 0.2s ease;
+    }
+    
+    .menu-toggle:hover {
+        color: var(--cobalt);
+    }
+    
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 0 24px;
+        max-height: 0;
+        overflow: hidden;
+        background: var(--midnight);
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        transition:
+            max-height 0.35s ease,
+            padding 0.35s ease,
+            border-color 0.35s ease;
+    }
+    
+    .mobile-menu.open {
+        max-height: 300px;
+        padding: 30px 24px;
+        border-top-color: rgba(248, 250, 252, 0.1);
+        border-bottom-color: rgba(248, 250, 252, 0.1);
+    }
+    
+    .mobile-menu a {
+        color: var(--cloud);
+        text-decoration: none;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        transition: color 0.2s ease;
+    }
+    
+    .mobile-menu a:hover {
+        color: var(--cobalt);
+    }
+
+    header {
+        padding: 24px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 24px;
+    }
+
+    h1 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    .contact {
+        padding: 120px 24px 100px;
+    }
+
+    .contact h2 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    #backToTop {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+    padding: 140px 6vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-page h1 {
+    margin-bottom: 35px;
+}
+
+.contact-text {
+    color: var(--slate);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 700px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    color: var(--cloud);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 18px 20px;
+    border: 1px solid rgba(248, 250, 252, 0.15);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--cloud);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--cobalt);
+    background: rgba(37, 99, 235, 0.04);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--slate);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: var(--midnight);
+    color: var(--cloud);
+}
+
+.contact-form .button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   PACKAGES PAGE
+========================= */
+
+.packages-page {
+    padding: 140px 6vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.packages-page h1 {
+    margin-bottom: 35px;
+}
+
+.packages-intro {
+    color: var(--slate);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-bottom: 80px;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.package-card {
+    border: 1px solid rgba(248, 250, 252, 0.12);
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cobalt);
+}
+
+.package-card.featured {
+    border-color: var(--cobalt);
+}
+
+.package-label {
+    color: var(--electric);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+}
+
+.package-card h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(4rem, 7vw, 6rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin-bottom: 30px;
+}
+
+.package-description {
+    color: var(--slate);
+    line-height: 1.7;
+    max-width: 450px;
+    margin-bottom: 35px;
+}
+
+.package-card ul,
+.maintenance-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.package-card li,
+.maintenance-card li {
+    color: var(--cloud);
+    line-height: 1.5;
+    padding-left: 22px;
+    position: relative;
+}
+
+.package-card li::before,
+.maintenance-card li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--cobalt);
+}
+
+.package-card .button {
+    margin-top: auto;
+}
+
+
+/* =========================
+   MAINTENANCE
+========================= */
+
+.maintenance {
+    padding: 140px 6vw;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.maintenance h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin-bottom: 40px;
+}
+
+.maintenance h2 span {
+    color: var(--cobalt);
+}
+
+.maintenance-text {
+    color: var(--slate);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+
+.maintenance-card {
+    border: 1px solid rgba(248, 250, 252, 0.12);
+    padding: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.maintenance-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    letter-spacing: -0.06em;
+}
+
+.maintenance-card h3 span {
+    color: var(--slate);
+    font-size: 1rem;
+    letter-spacing: 0;
+    font-family: 'Inter', sans-serif;
+    margin-left: 8px;
+}
+
+.maintenance-note {
+    color: var(--slate);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   CONTACT + PACKAGES MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .contact-page,
+    .packages-page,
+    .maintenance {
+        padding: 100px 24px;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card {
+        min-height: auto;
+        padding: 35px;
+    }
+
+    .maintenance-card {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .contact-page,
+    .packages-page,
+    .maintenance {
+        padding: 80px 24px;
+    }
+
+    .contact-page h1,
+    .packages-page h1 {
+        font-size: clamp(3.5rem, 15vw, 6rem);
+    }
+
+    .contact-form {
+        gap: 24px;
+    }
+
+    .package-card {
+        padding: 28px;
+    }
+
+    .maintenance-card {
+        padding: 28px;
+    }
+}
