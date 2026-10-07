@@ -8,6 +8,6 @@ setTimeout(() => {
 
 if (westwebReturn) {
     westwebReturn.addEventListener("click", () => {
-        alert("TRADESPERSON BUTTON WORKS");
+        window.top.location.replace("https://web-designer69.github.io/westweb/index.html");
     });
 }
