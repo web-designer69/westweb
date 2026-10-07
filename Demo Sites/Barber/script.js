@@ -5,5 +5,5 @@ setTimeout(() => {
 }, 3000);
 
 westwebReturn.addEventListener("click", () => {
-    window.location.href = "../../index.html";
+    window.top.location.href = "https://web-designer69.github.io/westweb/index.html";
 });
