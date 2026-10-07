@@ -5,5 +5,5 @@ setTimeout(() => {
 }, 3000);
 
 westwebReturn.addEventListener("click", () => {
-    window.location.href = "../../Source/index.html";
+    window.location.href = "../../index.html";
 });
