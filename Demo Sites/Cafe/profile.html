@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile — Common Ground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FIXED NAVIGATION -->
+    <header class="top-bar">
+
+        <button class="menu-button" id="menuButton" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="index.html" class="logo">
+            COMMON GROUND
+        </a>
+
+        <a href="profile.html"
+           class="signin-button profile-icon"
+           id="accountButton">
+            ♙
+        </a>
+
+    </header>
+
+
+    <!-- SLIDE-OUT MENU -->
+    <aside class="side-menu" id="sideMenu">
+
+        <button class="close-menu" id="closeMenu">
+            ×
+        </button>
+
+        <p class="menu-label">COMMON GROUND</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="menu-footer">
+            <a href="profile.html">Profile</a>
+        </div>
+
+    </aside>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <!-- PROFILE -->
+
+    <main class="profile-page">
+
+        <section class="profile-card">
+
+            <div class="profile-avatar">
+                ♙
+            </div>
+
+            <p class="eyebrow">YOUR ACCOUNT</p>
+
+            <h1 id="profileWelcome">
+                Welcome to<br>Common Ground.
+            </h1>
+            
+            <p id="profileMessage">
+                You're signed in and ready to go.
+            </p>
+
+            <div class="profile-details">
+
+                <div>
+                    <span>NAME</span>
+                    <strong id="profileName">Common Ground Guest</strong>
+                </div>
+            
+                <div>
+                    <span>EMAIL</span>
+                    <strong id="profileEmail">guest@example.com</strong>
+                </div>
+            
+                <div>
+                    <span>STATUS</span>
+                    <strong>Active</strong>
+                </div>
+            
+            </div>
+
+            <button class="signout-button" id="signoutButton">
+                SIGN OUT
+            </button>
+
+        </section>
+
+    </main>
+
+    <button class="westweb-return" id="westwebReturn">
+        ← WESTWEB
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

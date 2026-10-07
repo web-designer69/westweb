@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Common Ground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+
+        <button class="menu-button" id="menuButton" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <a href="index.html" class="logo">
+            COMMON GROUND
+        </a>
+
+        <a href="signin.html" class="signin-button" id="accountButton">
+            SIGN IN
+        </a>
+
+    </header>
+
+
+    <aside class="side-menu" id="sideMenu">
+
+        <button class="close-menu" id="closeMenu">×</button>
+
+        <p class="menu-label">COMMON GROUND</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="menu-footer">
+            <a href="signin.html">Sign in</a>
+            <a href="signup.html">Create an account</a>
+        </div>
+
+    </aside>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <main class="contact-page">
+
+        <section class="contact-heading">
+
+            <p class="eyebrow">GET IN TOUCH</p>
+
+            <h1>
+                Come say<br>
+                hello.
+            </h1>
+
+            <p>
+                Got a question, a booking enquiry or just want to
+                say hi? We'd love to hear from you.
+            </p>
+
+        </section>
+
+
+        <section class="contact-content">
+
+            <div class="contact-details">
+
+                <div>
+                    <span>ADDRESS</span>
+                    <strong>42 Common Street</strong>
+                    <p>Glasgow, Scotland</p>
+                </div>
+
+                <div>
+                    <span>OPENING HOURS</span>
+                    <strong>Mon — Sun</strong>
+                    <p>8:00am — 5:00pm</p>
+                </div>
+
+                <div>
+                    <span>EMAIL</span>
+                    <strong>hello@commonground.cafe</strong>
+                </div>
+
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+
+                <label for="name">Your name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email address</label>
+                <input type="email" id="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="6" required></textarea>
+
+                <button type="submit" class="primary-button">
+                    SEND MESSAGE
+                </button>
+
+                <p class="form-success" id="contactSuccess">
+                    Thanks! Your message has been sent.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+    <button class="westweb-return" id="westwebReturn">
+        ← WESTWEB
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
