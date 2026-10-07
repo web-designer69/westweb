@@ -8,6 +8,6 @@ setTimeout(() => {
 
 if (westwebReturn) {
     westwebReturn.addEventListener("click", () => {
-        window.location.href = "../../Source/index.html";
+        window.top.location.href = "https://web-designer69.github.io/westweb/index.html";
     });
 }
